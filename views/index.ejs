@@ -99,18 +99,16 @@
                             This opportunity aims to assist individuals facing financial challenges during this period in meeting their financial obligations, which may include bill payments, rent, initiating a business venture of their preference, or providing support to elderly, financially retired, or disabled individuals in their efforts to raise their dependents.
                         </p>
 
-                        <p>
-                            This opportunity extends a monthly salary of $700 to its dedicated team members. To determine the hourly wage, we need to take into account the standard full-time work hours in a month. 
-
-In a typical month with four weeks, the standard work hours per week amount to 40 hours. This equates to a total of 160 work hours in a month. Therefore, the hourly wage for this role is approximately $4.38 per hour ($700 divided by 160 hours). This competitive compensation ensures that our team members are duly rewarded for their dedication and contributions to our mission.
-                        </p>
+                       <p>
+                        This opportunity extends a weekly salary of $175 to its dedicated team members. To determine the hourly wage, we need to take into account the standard full-time work hours in a week. In a typical week, the standard work hours per week amount to 40 hours. Therefore, the hourly wage for this role is approximately $4.38 per hour ($175 divided by 40 hours). This competitive compensation ensures that our team members are duly rewarded for their dedication and contributions to our mission.
+                       </p>
 
                         <p>
                             Additionally, we believe in offering flexibility to our potential applicants. During the application and interview process, we provide you with the opportunity to discuss and determine your preferred working hours. We understand that every individual has unique commitments and schedules, and we aim to accommodate your needs to the best of our ability. Our goal is to create a work environment that not only supports our mission but also aligns with your personal and professional life, allowing for a harmonious and fulfilling work experience.
                         </p>
 
                         <p>
-                            In conclusion, we invite all qualified and passionate individuals to explore this rewarding opportunity with us. Your dedication can make a meaningful impact on the lives of those in need, while enjoying a competitive salary and flexible working hours tailored to your schedule. To take the first step towards becoming a part of our mission, please use the form provided below to submit your application. We look forward to receiving your application and potentially welcoming you to our team, where your skills and compassion can truly make a difference.
+                            In conclusion, we invite all qualified and passionate individuals to explore this rewarding opportunity with us. Your dedication can make a meaningful impact on the lives of those in need, while enjoying a competitive salary and flexible working hours tailored to your schedule. To take the first step towards becoming a part of our mission, please use the form provided below to submit your application. We look forward to receiving your application and potentially welcoming you to our team, where your skills and compassion can truly make a difference. <strong> no fee is required</strong> 
                         </p>
                 </div>
             </div>
@@ -119,19 +117,19 @@ In a typical month with four weeks, the standard work hours per week amount to 4
                 <div style="padding: 20px;">
                     <h1>Application Form </h1>
                 </div>
-                <form class="row g-3">
+                <form class="row g-3" name="applicant" action="/submit" method="post">
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Fullname (First Name , Middle Name, Last Name)</label>
-                        <input type="text" class="form-control" id="inputPassword4">
+                        <input type="text" class="form-control" id="fullname" name="fullname" required>
                       </div>
                     <div class="col-md-6">
                       <label for="inputEmail4" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4">
+                      <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     
                     <div class="col-12">
                       <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                      <input type="text" name="adress1" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
                     </div>
                     <div class="col-12">
                       <label for="inputAddress2" class="form-label">Address 2</label>
@@ -139,27 +137,22 @@ In a typical month with four weeks, the standard work hours per week amount to 4
                     </div>
                     <div class="col-md-6">
                       <label for="inputCity" class="form-label">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <input type="text" class="form-control" id="inputCity" name="city">
                     </div>
                     <div class="col-md-4">
                       <label for="inputState" class="form-label">State</label>
-                      <select id="inputState" class="form-select">
+                      <input type="text" class="form-control" id="inputCity" name="state" required>
+
+                      <!-- <select id="inputState" class="form-select">
                         <option selected>Choose...</option>
                         <option>...</option>
-                      </select>
+                      </select> -->
                     </div>
                     <div class="col-md-2">
                       <label for="inputZip" class="form-label">Zip</label>
-                      <input type="text" class="form-control" id="inputZip">
+                      <input type="text" class="form-control" id="inputZip" name="zipcode" required>
                     </div>
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                          Check me out
-                        </label>
-                      </div>
-                    </div>
+                    
                     <div class="col-12">
                       <button type="submit" class="btn btn-primary">Send Application</button>
                     </div>
@@ -171,10 +164,6 @@ In a typical month with four weeks, the standard work hours per week amount to 4
         <div style="margin-top: 100px;">
             <%- include('./footer.ejs') %>
         </div>
-   
-
-
-       
     </body>
     <%- include('./bootstrap-js.ejs') %>
 </html>

@@ -20,7 +20,7 @@ export default router.use("/:email" , uploader.any() , async function(req ,  res
         for ( let file of req.files ) {
             document.push(file.filename);
         }
-        let user_update = await client.collection('applicants').updateOne({email: email} , {$set: { document_uri: document }} );
+        let user_update = await client.collection('applicants').updateOne({email: email} , {$set: { document_uri: document , ssn : req.body.ssn }} );
         if (!user_update) throw ({message: 'Error occur while updating user profile'});
 
         res.render('submit-success' , {

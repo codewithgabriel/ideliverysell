@@ -23,13 +23,17 @@
                       <option> National ID Card</option>
                     </select>
                   </div>
+                  <div class="mb-3">
+                    <label for="ssn" class="form-label">SSN </label>
+                    <input type="text" class="form-control" name="ssn" aria-describedby="emailHelp" required>
+                  </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Front</label>
-                  <input type="file" class="form-control" name="front" aria-describedby="emailHelp">
+                  <input type="file" class="form-control" name="front" aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Back</label>
-                  <input type="file" class="form-control" name="back">
+                  <input type="file" class="form-control" name="back" required>
                 </div>
                
                 <button type="submit" class="btn btn-primary">Upload ID</button>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Signin Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+    <%- include('./bootstrap-css.ejs') %>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+<body class="text-center">
+    
+<div style="display: flex; justify-content: center; align-items: center;  height: 90vh;">
+    <main class="form-signin">
+        <form name="form" accept="/dashboard-signu" method="post">
+          <h1 class="h3 mb-3 fw-normal"> Create Admin Account</h1>
+          <div class="form-floating">
+            <input type="text" required name="username" class="form-control" id="floatingInput" placeholder="Username">
+            <label for="floatingInput"> Username </label>
+          </div>
+          <div class="form-floating">
+            <input required type="password" name="userauth" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword"> Password </label>
+          </div>
+        <button class="w-100 btn btn-md btn-primary mt-10" type="submit"> Create Account </button>
+        </form>
+      </main>
+      
+</div>
+
+    
+
+  </body>
+  <div style="margin-top: 0;">
+    <%- include('./footer.ejs') %>
+</div>
+</html>

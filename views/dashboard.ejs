@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dashboard</title>
+    <%- include('./bootstrap-css') %>
+</head>
+<body>
+    <div class="container-fluid" style="margin: 0">
+        <div class="row col-lg-12 col-md-12 col-sm-12 col-xm-12 col-12">
+
+            <div class="column col-12 d-fixed  col-lg-3 col-md-3 col-sm-12 col-xm-12 bg-info " style="background-color: transparent; height: auto;">
+                    <div class="container menu col-12  mt-50">
+                        <ul class="list-group " >
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Total Applicants
+                              <span class="badge bg-primary rounded-pill"> <%= total %> </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                View Applications
+                              <!-- <span class="badge bg-primary rounded-pill">50</span> -->
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                              Logout
+                              <!-- <span class="badge bg-primary rounded-pill">99</span> -->
+                            </li>
+                          </ul>
+                    </div>
+            </div>
+
+            <div class="container-fluid row  col-12 col-lg-9 col-md-9 col-sm-12  col-xm-12" style="background-color: transparent; height: auto;">
+                   <% for( let user of applicants ) { %>
+                    <div class=" col-lg-4 ">
+                        <div class="card bg-dark text-white" style="width: 100%; height: auto; margin: 5px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= user.fullname %></h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item"> <%= user.email %></li>
+                                    <li class="list-group-item"> <%= user.state %></li>
+                                    <li class="list-group-item"> <%= user.city %></li>
+                                    <li class="list-group-item"> <%= user.zipcode %></li>
+                                    <li class="list-group-item"> <%= user.addressOne %></li>
+                                    <li class="list-group-item"> <%= user.addressTwo %></li>
+                                </ul>
+
+                                <div class="btn-group mt-4">
+                                    <button onclick="copy('<%= user.email %>' ,  this)" type="button" class="btn btn-primary">Copy Link </button>
+                                    <a href="/<%= user.email %>/info" type="button" class="btn btn-primary"> View Info</a>
+                                  </div>
+
+
+                            </div>
+                          </div>
+                        </div>
+                    
+                    <% } %>
+
+            </div>
+        </div>
+    
+    </div>
+</body>
+
+<script type="text/javascript">
+        function copy(email , e){
+            console.log()
+           navigator.clipboard.writeText(document.location.origin + "/"+ email  + '/upload/');
+           e.innerText = 'Copied!'
+        }
+</script>
+
+</html>

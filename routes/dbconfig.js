@@ -13,8 +13,7 @@ try {
 }
 
 
-export default  
-client.db('idelivery').collection('applicants');
+export default  client.db('idelivery');
 
 
 

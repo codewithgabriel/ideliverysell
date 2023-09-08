@@ -15,12 +15,7 @@ export default router.use("/" , async function(req ,  res , next){
             req.session.user = username;
             req.session.save();
             res.redirect("/dashboard");
-            // res.render("dashboard" , {
-            //     error: false,
-            //     title: "Admin Dashboard",
-            //     back: "/dashboard" , 
-            //     proceed: "/dashboard-signin"
-            // });
+          
             res.end();
             
             
